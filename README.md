@@ -58,6 +58,16 @@ The **dataset** parameter might need to be changed accordingly. Selections are M
 python main.py --runner PixelCNNPPSamplerRunner --config pixelcnnpp_reverse_sample.yml --doc cifar10_denoise_images
 ``` 
 
+## Initial Thoughts 
+
+- Autoregressive modeling trained with distribution smoothing does indeed aid image quality. 
+- One important implemetation detail that was missing from the paper was the training and sampling time for each model. This information is crucial when it comes to reproduction of results as, the availability of resources could lead to poor reproduction. 
+- One such meaningful contribution we add to this paper is the training time for each model along with sampling time. Inspite of the high computational requirements, we were able to establish a trend about the imporvement in the FID and the Inception scores. 
+- In addition to this contribution, we provide the BPD, FID and the Inception scores for MNIST dataset.
+
+
+
+
 ## References to authors code and Acknowledgements
 ```
 @article{meng2021improved,
